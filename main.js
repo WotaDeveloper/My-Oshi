@@ -19,7 +19,7 @@ let wee = () => {
     alert("สาวน้อยลูกครึ่ง ดีกรีนักฟาดกระทะ ผู้ที่ติดเกม Player's Unknown BattleGround หรือ PubG เป็นที่สุด เธอมีคติประจำใจว่า 'คนจริงต้องลงโพชิงกิ' ")
 }
 
-let tarwaan = async () => {
+let tarwaan = () => {
     // let audioTarwaan = document.createElement("audio")
     // audioTarwaan.setAttribute("src", "tarwaan.mp3")
     // status = false
