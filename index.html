@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Oshi Trio</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="static/css/main.css" />
-    <link rel="shortcut icon" href="static/img/girl.png" type="image/png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#008000">
-</head>
-<body>
-    <noscript>
-        This Browser can't support Javascript.
-    </noscript>
-    <h1>Oshi Trio</h1>
-    <h3>กดที่ชื่อของแต่ละคน จะมีคลิปเสียงของพวกเธอเล่นขึ้นมา (กดซ้ำเป็นการ Pause)</h3>
-    <div>
-        <div class="card" onclick="natherine()">
-            <audio src="static/audio/natherine.mp3" preload="auto" id="natherinemp3"></audio>
-            <img src="static/img/Natherine.jpg" alt="natherine">
-            <p>Natherine BNK48</p>
-            <p id="natherinePlay" style="font-size:18px;"></p>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Oshi Trio</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="static/css/main.css" />
+        <link rel="shortcut icon" href="static/img/girl.png" type="image/png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#008000">
+    </head>
+
+    <body>
+        <noscript>
+            This Browser can't support Javascript.
+        </noscript>
+        <h1>Oshi Trio</h1>
+        <h3>กดที่ชื่อของแต่ละคน จะมีคลิปเสียงของพวกเธอเล่นขึ้นมา (กดซ้ำเป็นการ Pause)</h3>
+        <div>
+            <div class="card" onclick="natherine()">
+                <audio src="static/audio/natherine.mp3" preload="auto" id="natherinemp3"></audio>
+                <img src="static/img/Natherine.jpg" alt="natherine">
+                <p>Natherine BNK48</p>
+                <p id="natherinePlay" style="font-size:18px;"></p>
+            </div>
+            <div class="card" onclick="wee()">
+                <audio src="static/audio/wee.mp3" preload="auto" id="weemp3"></audio>
+                <img src="static/img/Wee.jpg" alt="weeraya">
+                <p>Wee BNK48</p>
+                <p id="weePlay" style="font-size:18px;"></p>
+            </div>
+            <div class="card" onclick="tarwaan()">
+                <audio src="static/audio/tarwaan.mp3" preload="auto" id="tarwaanmp3"></audio>
+                <img src="static/img/Tarwaan.jpg" alt="tarwaan">
+                <p>Tarwaan BNK48</p>
+                <p id="tarwaanPlay" style="font-size:18px;"></p>
+            </div>
         </div>
-        <div class="card" onclick="wee()">
-            <audio src="static/audio/wee.mp3" preload="auto" id="weemp3"></audio>
-            <img src="static/img/Wee.jpg" alt="weeraya">
-            <p>Wee BNK48</p>
-            <p id="weePlay" style="font-size:18px;"></p>
-        </div>
-        <div class="card" onclick="tarwaan()">
-            <audio src="static/audio/tarwaan.mp3" preload="auto" id="tarwaanmp3"></audio>
-            <img src="static/img/Tarwaan.jpg" alt="tarwaan">
-            <p>Tarwaan BNK48</p>
-            <p id="tarwaanPlay" style="font-size:18px;"></p>
-        </div>
-    </div>
-    <footer>
-        <h3>Repository -> <a href="https://github.com/wotadeveloper/My-Oshi">My Oshi</a></h3>
-        <h3>Github -> <a href="https://github.com/wotadeveloper">Wota Developer</a> by <a href="https://github.com/lebrancconvas">Lebranc Convas</a></h3>
-    </footer>
-    <script src="static/js/main.js"></script>
-    <script type="text/javascript">
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/serviceworker.js')
-                .then(function () {
-                    console.log('Service Worker Registered');
-            });
-        }
-    </script>
-</body>
+        <footer>
+            <h3>Repository -> <a href="https://github.com/wotadeveloper/My-Oshi">My Oshi</a></h3>
+            <h3>Github -> <a href="https://github.com/wotadeveloper">Wota Developer</a> by <a href="https://github.com/lebrancconvas">Lebranc
+                    Convas</a></h3>
+        </footer>
+        <script src="static/js/main.js"></script>
+        <script type="text/javascript">
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+        </script>
+    </body>
+
 </html>
