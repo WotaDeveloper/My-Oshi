@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <noscript>
+        This Browser can't support Javascript.
+    </noscript>
     <h1>Oshi Trio</h1>
     <h3>กดที่ชื่อของแต่ละคน จะมีคลิปเสียงของพวกเธอเล่นขึ้นมา (กดซ้ำเป็นการ Pause)</h3>
     <div>
@@ -36,5 +39,13 @@
         <h3>Github -> <a href="https://github.com/wotadeveloper">Wota Developer</a> by <a href="https://github.com/lebrancconvas">Lebranc Convas</a></h3>
     </footer>
     <script src="static/js/main.js"></script>
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+            });
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+{
+    "short_name": "My Oshi",
+    "name": "My Oshi's Sound",
+    "icons": [{
+            "src": "static/img/Wee.jpg",
+            "sizes": "96x96",
+            "type": "image/jpg"
+        },
+        {
+            "src": "static/img/Wee.jpg",
+            "sizes": "144x144",
+            "type": "image/jpg"
+        },
+        {
+            "src": "static/img/Wee.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg"
+        },
+        {
+            "src": "static/img/Wee.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "purple",
+    "background_color": "pink",
+    "prefer_related_applications": false
+}
